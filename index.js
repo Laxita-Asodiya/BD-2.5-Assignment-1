@@ -257,12 +257,16 @@ function fetchProductByRom(products, rom) {
 }
 
 function fetchProductByBrand(products, brand) {
-  let result = products.filter((ele) => ele.brand === brand);
+  let result = products.filter(
+    (ele) => ele.brand.toLowerCase() === brand.toLowerCase()
+  );
   return result;
 }
 
 function fetchProductByOs(products, os) {
-  let result = products.filter((ele) => ele.os === os);
+  let result = products.filter(
+    (ele) => ele.os.toLowerCase() === os.toLowerCase()
+  );
   return result;
 }
 
